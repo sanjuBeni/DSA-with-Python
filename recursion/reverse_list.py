@@ -3,10 +3,10 @@ lst = [7, 5, 3, 1, 4, 8, 2, 9]
 print(lst)
 
 # TC : O(n/2) ~ O(n)
-# SC : O(1)
+# SC : O(n) stack space
 
 def reverse_list(lst, right = 0, left = 0):
-    if left > right:
+    if left >= right:
         return
     
     lst[left], lst[right] = lst[right], lst[left]
@@ -20,7 +20,7 @@ def reverse_list(lst, right = 0, left = 0):
 left = 0
 right = len(lst) - 1
 
-while left < right:
+while left <= right:
     lst[left], lst[right] = lst[right], lst[left]
     left += 1
     right -= 1
