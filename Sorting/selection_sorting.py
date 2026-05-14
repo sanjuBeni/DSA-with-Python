@@ -4,6 +4,10 @@
 # 5, 10, 20, 12
 lst = [9, 5, 7, 1, 3, 5, 10, 20, 12]
 
+"""
+    TC: O(n^2)
+    SC: O(1)
+"""
 def ascending_order(lst):
     if not lst:
         return 0, []
