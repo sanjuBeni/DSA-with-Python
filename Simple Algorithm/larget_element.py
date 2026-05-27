@@ -1,7 +1,7 @@
 
 nums = [55, 32, -97, 99, 3, 67]
 
-nums = [-10, -20, -50, -30, -5]
+# nums = [-10, -20, -50, -30, -5]
 
 """
     TC: O(n) => O(n/2)
@@ -33,4 +33,17 @@ def find_largest_num(nums:list):
     return large    
 
 
-print(find_largest_num(nums))
+# print(find_largest_num(nums))
+
+def large_ele(nums:list[int]):
+    if not nums :
+        return []
+    
+    large = float("-inf")
+    for x in nums:
+        if large < x:
+            large = x
+
+    return large
+
+print(large_ele(nums))
